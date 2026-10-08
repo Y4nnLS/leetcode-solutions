@@ -1,0 +1,7 @@
+[
+  { "name": "removes a repeated value", "input": { "nums": [1, 1, 2] }, "expected": { "k": 2, "nums": [1, 2] } },
+  { "name": "keeps one copy of each repeated value", "input": { "nums": [0, 0, 1, 1, 1, 2, 2, 3, 3, 4] }, "expected": { "k": 5, "nums": [0, 1, 2, 3, 4] } },
+  { "name": "handles an already unique array", "input": { "nums": [1, 2, 3] }, "expected": { "k": 3, "nums": [1, 2, 3] } },
+  { "name": "handles a single element", "input": { "nums": [1] }, "expected": { "k": 1, "nums": [1] } },
+  { "name": "handles an empty array", "input": { "nums": [] }, "expected": { "k": 0, "nums": [] } }
+]

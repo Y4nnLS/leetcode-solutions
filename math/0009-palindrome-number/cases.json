@@ -1,0 +1,7 @@
+[
+  { "name": "recognizes an even-length palindrome", "input": { "x": 1221 }, "expected": true },
+  { "name": "rejects a negative number", "input": { "x": -121 }, "expected": false },
+  { "name": "rejects a non-palindrome ending in zero", "input": { "x": 10 }, "expected": false },
+  { "name": "recognizes zero", "input": { "x": 0 }, "expected": true },
+  { "name": "recognizes an odd-length palindrome", "input": { "x": 123454321 }, "expected": true }
+]

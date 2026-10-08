@@ -1,0 +1,7 @@
+[
+  { "name": "finds a pair in a typical array", "input": { "nums": [2, 7, 11, 15], "target": 9 }, "expected": [0, 1] },
+  { "name": "finds a pair after an earlier unmatched value", "input": { "nums": [3, 2, 4], "target": 6 }, "expected": [1, 2] },
+  { "name": "uses two equal values at different indices", "input": { "nums": [3, 3], "target": 6 }, "expected": [0, 1] },
+  { "name": "handles zero values", "input": { "nums": [0, 4, 3, 0], "target": 0 }, "expected": [0, 3] },
+  { "name": "handles negative values", "input": { "nums": [-3, 4, 3, 90], "target": 0 }, "expected": [0, 2] }
+]

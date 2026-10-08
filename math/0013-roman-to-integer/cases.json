@@ -1,0 +1,7 @@
+[
+  { "name": "converts a single symbol", "input": { "s": "I" }, "expected": 1 },
+  { "name": "converts additive symbols", "input": { "s": "LVIII" }, "expected": 58 },
+  { "name": "converts a leading subtractive pair", "input": { "s": "IV" }, "expected": 4 },
+  { "name": "converts multiple subtractive pairs", "input": { "s": "MCMXCIV" }, "expected": 1994 },
+  { "name": "converts a mixed numeral", "input": { "s": "CDXLIV" }, "expected": 444 }
+]

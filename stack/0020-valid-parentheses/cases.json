@@ -1,0 +1,7 @@
+[
+  { "name": "accepts a simple pair", "input": { "s": "()" }, "expected": true },
+  { "name": "accepts several adjacent pairs", "input": { "s": "()[]{}" }, "expected": true },
+  { "name": "rejects a mismatched closing bracket", "input": { "s": "(]" }, "expected": false },
+  { "name": "rejects incorrectly nested brackets", "input": { "s": "([)]" }, "expected": false },
+  { "name": "rejects an incomplete sequence", "input": { "s": "{[]" }, "expected": false }
+]

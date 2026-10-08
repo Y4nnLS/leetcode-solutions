@@ -1,0 +1,7 @@
+[
+  { "name": "finds a shared prefix across three words", "input": { "strs": ["flower", "flow", "flight"] }, "expected": "fl" },
+  { "name": "returns empty when there is no common prefix", "input": { "strs": ["dog", "racecar", "car"] }, "expected": "" },
+  { "name": "keeps the only string", "input": { "strs": ["alone"] }, "expected": "alone" },
+  { "name": "handles an empty string", "input": { "strs": ["", "b"] }, "expected": "" },
+  { "name": "reduces a long initial prefix", "input": { "strs": ["interspecies", "interstellar", "interstate"] }, "expected": "inters" }
+]
