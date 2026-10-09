@@ -54,7 +54,7 @@ On Windows systems where PowerShell blocks `npm.ps1`, use `npm.cmd test` or chan
 | `npm run test:coverage` | Runs active tests with Node's native experimental coverage report. |
 | `npm run validate` | Checks repository structure and then runs the active suite. |
 
-Coverage is a signal for untested paths, not proof of correctness. The pending exercise is intentionally excluded from passing results because its tests are skipped.
+Coverage is a signal for untested paths, not proof of correctness.
 
 ## Running a Single Exercise
 
@@ -68,7 +68,7 @@ npm run test:exercise -- 26 --case 2
 
 Without `--case`, every case in `cases.json` runs. With `--case N`, only the Nth object in that file runs; numbering starts at 1. The runner validates the position and reports the available range when it does not exist. Output from `console.log()` and errors from `solution.js` are inherited by the terminal, which makes the command suitable for debugging.
 
-Skipped tests remain skipped even when selected. LeetCode 26 is intentionally skipped while it is In Progress. To debug it during a personal implementation, temporarily remove the `{ skip: 'Pending personal implementation.' }` test option in its `solution.test.js`; then run a selected case. Restore or replace that pending marker only when the exercise is deliberately activated and implemented.
+When an exercise is still pending, its tests may remain skipped even when selected. Activate them only after its implementation and cases are ready.
 
 ## Adding a New Exercise
 
@@ -90,12 +90,12 @@ It creates a topic directory and four starter files without overwriting an exist
 | 14 | Longest Common Prefix | Easy | Arrays and Strings | Solved | [solution](arrays-and-strings/0014-longest-common-prefix/solution.js) | [notes](arrays-and-strings/0014-longest-common-prefix/NOTES.md) |
 | 20 | Valid Parentheses | Easy | Stack | Solved | [solution](stack/0020-valid-parentheses/solution.js) | [notes](stack/0020-valid-parentheses/NOTES.md) |
 | 21 | Merge Two Sorted Lists | Easy | Linked Lists | Solved | [solution](linked-lists/0021-merge-two-sorted-lists/solution.js) | [notes](linked-lists/0021-merge-two-sorted-lists/NOTES.md) |
-| 26 | Remove Duplicates from Sorted Array | Easy | Arrays and Strings | In Progress | [placeholder](arrays-and-strings/0026-remove-duplicates-from-sorted-array/solution.js) | [notes](arrays-and-strings/0026-remove-duplicates-from-sorted-array/NOTES.md) |
+| 26 | Remove Duplicates from Sorted Array | Easy | Arrays and Strings | Solved | [solution](arrays-and-strings/0026-remove-duplicates-from-sorted-array/solution.js) | [notes](arrays-and-strings/0026-remove-duplicates-from-sorted-array/NOTES.md) |
 
 ## Progress
 
-- Solved: 6
-- In progress: 1
+- Solved: 7
+- In progress: 0
 - Registered: 7
 
 ## Continuous Integration

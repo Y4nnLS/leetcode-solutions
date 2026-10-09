@@ -71,15 +71,6 @@ for (const topic of fs.readdirSync(root, { withFileTypes: true }).filter((entry)
   }
 }
 
-const pendingSolution = path.join(root, expected.get('0026'), 'solution.js');
-const pendingTest = path.join(root, expected.get('0026'), 'solution.test.js');
-if (fs.existsSync(pendingSolution) && !fs.readFileSync(pendingSolution, 'utf8').includes("throw new Error('Not implemented')")) {
-  reportError('0026: pending solution must remain an explicit placeholder.');
-}
-if (fs.existsSync(pendingTest) && !fs.readFileSync(pendingTest, 'utf8').includes('skip')) {
-  reportError('0026: pending tests must remain skipped.');
-}
-
 const readmePath = path.join(root, 'README.md');
 if (!fs.existsSync(readmePath)) {
   reportError('README.md is missing.');

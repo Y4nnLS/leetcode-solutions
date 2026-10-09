@@ -9,7 +9,7 @@
   "scripts": {
     "test": "node --test",
     "test:watch": "node --test --watch",
-    "test:coverage": "node --experimental-test-coverage --test --test-coverage-exclude=**/0026-remove-duplicates-from-sorted-array/**",
+    "test:coverage": "node --experimental-test-coverage --test",
     "test:exercise": "node scripts/run-exercise.js",
     "new:exercise": "node scripts/new-exercise.js",
     "validate": "node scripts/validate.js && node --test"
