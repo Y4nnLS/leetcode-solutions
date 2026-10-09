@@ -1,0 +1,42 @@
+[
+  {
+    "name": "finds the first occurrence in the standard example",
+    "input": { "haystack": "sadbutsad", "needle": "sad" },
+    "expected": 0
+  },
+  {
+    "name": "returns minus one when the needle is absent",
+    "input": { "haystack": "leetcode", "needle": "leeto" },
+    "expected": -1
+  },
+  {
+    "name": "returns the earliest occurrence among repeated matches",
+    "input": { "haystack": "mississippi", "needle": "iss" },
+    "expected": 1
+  },
+  {
+    "name": "handles overlapping candidate matches",
+    "input": { "haystack": "aaa", "needle": "aa" },
+    "expected": 0
+  },
+  {
+    "name": "finds a match near the end of the haystack",
+    "input": { "haystack": "aaaaab", "needle": "aaab" },
+    "expected": 2
+  },
+  {
+    "name": "finds a needle equal to the entire haystack",
+    "input": { "haystack": "needle", "needle": "needle" },
+    "expected": 0
+  },
+  {
+    "name": "returns minus one when the needle is longer than the haystack",
+    "input": { "haystack": "short", "needle": "longer" },
+    "expected": -1
+  },
+  {
+    "name": "handles a single-character match",
+    "input": { "haystack": "a", "needle": "a" },
+    "expected": 0
+  }
+]
