@@ -1,0 +1,32 @@
+[
+  {
+    "name": "removes values from the standard example",
+    "input": { "nums": [3, 2, 2, 3], "val": 3 },
+    "expected": { "k": 2, "nums": [2, 2] }
+  },
+  {
+    "name": "removes several scattered occurrences",
+    "input": { "nums": [0, 1, 2, 2, 3, 0, 4, 2], "val": 2 },
+    "expected": { "k": 5, "nums": [0, 1, 3, 0, 4] }
+  },
+  {
+    "name": "keeps all values when target is absent",
+    "input": { "nums": [1, 2, 3], "val": 4 },
+    "expected": { "k": 3, "nums": [1, 2, 3] }
+  },
+  {
+    "name": "removes every value",
+    "input": { "nums": [7, 7, 7], "val": 7 },
+    "expected": { "k": 0, "nums": [] }
+  },
+  {
+    "name": "handles an empty array",
+    "input": { "nums": [], "val": 0 },
+    "expected": { "k": 0, "nums": [] }
+  },
+  {
+    "name": "preserves repeated non-target values",
+    "input": { "nums": [-1, 0, 1, 0, -1], "val": 0 },
+    "expected": { "k": 3, "nums": [-1, 1, -1] }
+  }
+]
