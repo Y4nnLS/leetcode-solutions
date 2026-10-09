@@ -1,0 +1,52 @@
+[
+  {
+    "name": "returns the index of an existing middle value",
+    "input": { "nums": [1, 3, 5, 6], "target": 5 },
+    "expected": 2
+  },
+  {
+    "name": "returns the insertion index between two values",
+    "input": { "nums": [1, 3, 5, 6], "target": 2 },
+    "expected": 1
+  },
+  {
+    "name": "returns the position after the last value",
+    "input": { "nums": [1, 3, 5, 6], "target": 7 },
+    "expected": 4
+  },
+  {
+    "name": "returns zero for a value before the first value",
+    "input": { "nums": [1, 3, 5, 6], "target": 0 },
+    "expected": 0
+  },
+  {
+    "name": "handles an existing value at the first position",
+    "input": { "nums": [1, 3, 5, 6], "target": 1 },
+    "expected": 0
+  },
+  {
+    "name": "handles an existing value at the last position",
+    "input": { "nums": [1, 3, 5, 6], "target": 6 },
+    "expected": 3
+  },
+  {
+    "name": "handles a single value equal to the target",
+    "input": { "nums": [4], "target": 4 },
+    "expected": 0
+  },
+  {
+    "name": "inserts after a single smaller value",
+    "input": { "nums": [-2], "target": 0 },
+    "expected": 1
+  },
+  {
+    "name": "inserts before a single larger value",
+    "input": { "nums": [8], "target": -1 },
+    "expected": 0
+  },
+  {
+    "name": "finds the insertion index among negative values",
+    "input": { "nums": [-10, -3, 0, 8], "target": -5 },
+    "expected": 1
+  }
+]
