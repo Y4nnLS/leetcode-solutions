@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+:root.dark { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { @apply m-0 bg-slate-50 font-sans text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100; }
+button, input, select, textarea { font: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { @apply outline-none ring-2 ring-sky-500 ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-950; }
+code, pre { font-family: "SFMono-Regular", Consolas, monospace; }
+.surface { @apply rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900; }
+.button { @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-lg px-3 text-sm font-medium transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-slate-800; }
+.button-primary { @apply bg-sky-600 text-white hover:bg-sky-700 dark:hover:bg-sky-500; }
+.tag { @apply inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200; }
+.code { @apply overflow-x-auto rounded-lg bg-slate-950 p-4 text-sm leading-6 text-slate-100; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }

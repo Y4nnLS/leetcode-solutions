@@ -53,12 +53,14 @@ for (const [number, relativeDirectory] of expected) {
   }
 }
 
-for (const topic of ['arrays-and-strings', 'math', 'stack', 'linked-lists']) {
+const exerciseTopics = ['arrays-and-strings', 'math', 'stack', 'linked-lists'];
+
+for (const topic of exerciseTopics) {
   if (!fs.existsSync(path.join(root, topic))) reportError(`Required topic directory is missing: ${topic}`);
 }
 
 const discovered = [];
-for (const topic of fs.readdirSync(root, { withFileTypes: true }).filter((entry) => entry.isDirectory() && !entry.name.startsWith('.'))) {
+for (const topic of fs.readdirSync(root, { withFileTypes: true }).filter((entry) => entry.isDirectory() && exerciseTopics.includes(entry.name))) {
   const topicPath = path.join(root, topic.name);
   for (const child of fs.readdirSync(topicPath, { withFileTypes: true }).filter((entry) => entry.isDirectory())) {
     const match = /^(\d{4})-([a-z0-9]+(?:-[a-z0-9]+)*)$/.exec(child.name);

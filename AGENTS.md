@@ -25,3 +25,9 @@ Never solve an exercise marked **In Progress**, TODO, or skipped without an expl
 ## Change policy and completion
 
 Do not run destructive Git commands, change global Git configuration, or perform push, merge, force-push, publishing, or other remote Git actions without explicit authorization. A solved problem requires implementation, valid cases, active passing tests, complete notes, an accurate README entry, and a passing `npm run validate`.
+
+## JavaScript Interactive Reference
+
+The standalone React/TypeScript application lives in `apps/javascript-reference`. Keep it independent of all LeetCode solution logic and the root `node:test` suite. Its educational catalog belongs in `src/data`, reusable deterministic visualizations belong in `src/lib/visualizers.ts`, and UI components must not use `eval`, `new Function`, or execute arbitrary visitor input.
+
+Use Brazilian Portuguese for user-facing application text and English for code identifiers. Document native-method complexity with implementation caveats when ECMAScript does not guarantee a bound. Preserve accessibility: semantic controls, keyboard operation, visible focus, reduced-motion support, and no color-only signals. The Vite base path and `deploy-reference.yml` target GitHub Pages; configure them locally but never push or publish without authorization.

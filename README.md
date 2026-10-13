@@ -17,6 +17,20 @@ This is a personal study repository for LeetCode problems. It keeps each JavaScr
 - Native `node:test` and `node:assert/strict`
 - npm and GitHub Actions
 
+## JavaScript Interactive Reference
+
+The repository also includes a standalone educational web application for studying JavaScript APIs, data structures, algorithms, and complexity. Its source is in [apps/javascript-reference](apps/javascript-reference/README.md). It is configured for GitHub Pages at `https://y4nnls.github.io/leetcode-solutions/` after the repository workflow is pushed and Pages is enabled.
+
+From the repository root:
+
+```bash
+npm run reference:dev
+npm run reference:test
+npm run reference:build
+```
+
+The application does not execute or alter LeetCode solutions.
+
 ## Repository Structure
 
 ```text

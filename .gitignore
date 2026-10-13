@@ -2,3 +2,8 @@ node_modules/
 coverage/
 .nyc_output/
 *.log
+apps/javascript-reference/node_modules/
+apps/javascript-reference/dist/
+apps/javascript-reference/coverage/
+apps/javascript-reference/playwright-report/
+apps/javascript-reference/test-results/

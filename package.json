@@ -7,11 +7,17 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test",
-    "test:watch": "node --test --watch",
-    "test:coverage": "node --experimental-test-coverage --test",
+    "test": "node scripts/run-root-tests.js",
+    "test:watch": "node scripts/run-root-tests.js --watch",
+    "test:coverage": "node scripts/run-root-tests.js --coverage",
     "test:exercise": "node scripts/run-exercise.js",
     "new:exercise": "node scripts/new-exercise.js",
-    "validate": "node scripts/validate.js && node --test"
+    "validate": "node scripts/validate.js && node scripts/run-root-tests.js",
+    "reference:dev": "npm --prefix apps/javascript-reference run dev",
+    "reference:build": "npm --prefix apps/javascript-reference run build",
+    "reference:test": "npm --prefix apps/javascript-reference run test",
+    "reference:typecheck": "npm --prefix apps/javascript-reference run typecheck",
+    "reference:lint": "npm --prefix apps/javascript-reference run lint",
+    "reference:test:e2e": "npm --prefix apps/javascript-reference run test:e2e"
   }
 }
