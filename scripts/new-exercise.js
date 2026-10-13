@@ -51,9 +51,14 @@ async function main() {
     assertValid(!fs.existsSync(target), `Directory ${exerciseDirectoryName} already exists and will not be overwritten.`);
 
     const parameterList = parameters.split(',').map((item) => item.trim()).filter(Boolean).join(', ');
+    const scenarioArguments = parameterList
+      .split(',')
+      .filter(Boolean)
+      .map((parameter) => `scenario.input.${parameter.trim()}`)
+      .join(', ');
     const solution = `/**\n * @param {...} ${parameterList || 'none'}\n * @return {*}\n */\nvar ${functionName} = function (${parameterList}) {\n  throw new Error('Not implemented');\n};\n\nmodule.exports = ${functionName};\n`;
     const cases = '[]\n';
-    const test = `const nodeTest = require('node:test');\nconst { selectCases } = require('../../shared/case-selection');\nconst cases = require('./cases.json');\n\nif (cases.length === 0) {\n  nodeTest.todo('LeetCode ${Number(number)} — add test cases after implementing ${functionName}');\n}\n\nfor (const scenario of selectCases(cases)) {\n  nodeTest.todo(\`LeetCode ${Number(number)} — implement validation for \${scenario.name}\`);\n}\n`;
+    const test = `const test = require('node:test');\nconst assert = require('node:assert/strict');\nconst ${functionName} = require('./solution');\nconst { selectCases } = require('../../shared/case-selection');\nconst cases = require('./cases.json');\n\nfor (const scenario of selectCases(cases)) {\n  test(\`LeetCode ${Number(number)} — \${scenario.name}\`, () => {\n    const actual = ${functionName}(${scenarioArguments});\n\n    assert.deepEqual(actual, scenario.expected);\n  });\n}\n`;
     const notes = `# ${Number(number)} — ${name}\n\n## Informações gerais\n\n- Dificuldade: ${difficulty}\n- Categoria: ${topic}\n- Link: ${url || 'Adicionar link do LeetCode.'}\n\n## Entendimento do problema\n\nDescreva o problema com suas próprias palavras.\n\n## Anotações\n\n- Hipóteses:\n- Tentativas:\n- Dificuldades encontradas:\n- Solução final (após implementar):\n`;
 
     fs.mkdirSync(target, { recursive: true });
@@ -63,7 +68,7 @@ async function main() {
     fs.writeFileSync(path.join(target, 'NOTES.md'), notes);
 
     console.log(`Created ${path.relative(root, target)} with solution.js, cases.json, solution.test.js, and NOTES.md.`);
-    console.log('Next steps: implement the function, add JSON cases, write active tests, complete the notes, and update README.md.');
+    console.log('Next steps: add JSON cases, implement the function, write the notes, update this table, and run npm run validate before calling the problem solved.');
   } catch (error) {
     console.error(`Could not create exercise: ${error.message}`);
     process.exitCode = 1;

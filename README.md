@@ -78,7 +78,7 @@ Run the interactive generator and enter the requested metadata:
 npm run new:exercise
 ```
 
-It creates a topic directory and four starter files without overwriting an existing problem number. The generated solution and test are intentionally pending; add real cases and implementation, write the notes, update this table, and run `npm run validate` before calling the problem solved.
+It creates a topic directory and four starter files without overwriting an existing problem number. The generated solution starts as a placeholder, but its test file runs every case added to `cases.json`; add real cases and implementation, write the notes, update this table, and run `npm run validate` before calling the problem solved.
 
 ## Solved Problems
 
