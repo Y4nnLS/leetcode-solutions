@@ -1,0 +1,37 @@
+[
+  {
+    "name": "returns the length of the final word in a simple sentence",
+    "input": { "s": "Hello World" },
+    "expected": 5
+  },
+  {
+    "name": "ignores leading, repeated, and trailing spaces",
+    "input": { "s": "   fly me   to   the moon  " },
+    "expected": 4
+  },
+  {
+    "name": "returns the length of a longer final word",
+    "input": { "s": "luffy is still joyboy" },
+    "expected": 6
+  },
+  {
+    "name": "handles a string containing one word",
+    "input": { "s": "single" },
+    "expected": 6
+  },
+  {
+    "name": "ignores spaces after the final word",
+    "input": { "s": "ends with spaces    " },
+    "expected": 6
+  },
+  {
+    "name": "handles a one-character final word",
+    "input": { "s": "a b c" },
+    "expected": 1
+  },
+  {
+    "name": "handles a single character surrounded by spaces",
+    "input": { "s": "   z   " },
+    "expected": 1
+  }
+]
